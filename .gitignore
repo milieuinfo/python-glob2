@@ -1,5 +1,7 @@
 *.pyc
 /LOCAL_TODO
+/build/
+/debian/python-glob2
 
 # distutils/setuptools
 /dist/

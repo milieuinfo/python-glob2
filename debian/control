@@ -1,0 +1,21 @@
+Source: python-glob2
+Section: python
+Priority: extra
+Maintainer: Serge van Ginderachter <serge@milieuinfo.be>
+Build-Depends:
+    debhelper (>= 8.0.0),
+    python-all (>= 2.6)
+Build-Depends-Indep:
+    python-setuptools
+Standards-Version: 3.9.3
+Homepage: https://pypi.python.org/pypi/glob2
+
+Package: python-glob2
+Architecture: all
+Depends:
+    ${python:Depends},
+    ${misc:Depends}
+Provides:
+    ${python:Provides}
+Description: Glob2
+ Version of the glob module that can capture patterns and supports recursive wildcards

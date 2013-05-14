@@ -1,0 +1,19 @@
+#!/bin/bash -e
+
+
+echo "Don't forget to update the change log if you pulled in new stuff from upstream:"
+echo "dch -v 0.4.1"
+
+mydir=$(dirname $(readlink -f $0))
+parentdir=$(readlink -f $mydir/..)
+projectdir=$(basename $mydir)
+version=$(grep __version__ src/glob2/__init__.py | cut -d\( -f2 | cut -d\) -f1 | sed -e 's/\s//g' -e s/,/./g)
+
+cd $parentdir
+tar -cvzf ${projectdir}_${version}.orig.tar.gz --exclude ${projectdir}/debian/ --exclude ${projectdir}/.git --exclude ${projectdir}/.gitignore ${projectdir}
+
+cd $projectdir
+debuild -uc -us
+
+rm -rf /debian/python-glob2
+

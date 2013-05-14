@@ -1,0 +1,11 @@
+python-glob2 (0.4.1) precise; urgency=low
+
+  * packaged new upstream version
+
+ -- Serge van Ginderachter <serge@vanginderachter.be>  Tue, 14 May 2013 16:30:46 +0200
+
+python-glob2 (0.3-1) precise; urgency=low
+
+  * Initial Packaging
+
+ -- Kiall Mac Innes <kiall@hp.com>  Mon, 01 Apr 2013 19:10:32 +0100
